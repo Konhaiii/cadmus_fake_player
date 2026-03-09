@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "cadmus_fake_player",
+	"version": "${version}",
+	"name": "Cadmus Fake Player",
+	"description": "An extension for Odyssey Claims that allows loaded chunks to simulate the presence of a player.",
+	"authors": [
+		"Konhaiii",
+		"MrTeki"
+	],
+	"contact": {
+		"homepage": "https://github.com/Konhaiii/cadmus_fake_player",
+		"sources": "https://github.com/Konhaiii/cadmus_fake_player",
+		"issues":  "https://github.com/Konhaiii/cadmus_fake_player/issues"
+	},
+	"license": "CC-BY-NC-4.0",
+	"icon": "assets/cadmus_fake_player/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"konhaiii.cadmus_fake_player.CadmusFakePlayer"
+		],
+		"client": [
+			"konhaiii.cadmus_fake_player.CadmusFakePlayerClient"
+		]
+	},
+	"mixins": [
+		"cadmus_fake_player.mixins.json",
+		{
+			"config": "cadmus_fake_player.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}
